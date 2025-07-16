@@ -1,0 +1,332 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../../../assets/Fonts/Founders_Grotesk/FoundersGrotesk-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'customBold';
+    src: url('../../../assets/Fonts/ABC Diatype/Web Fonts/4c4a87973ef80fc72049e01b9085fadc.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-position: center;
+    aspect-ratio: 16/9;
+    z-index: 2;
+    overflow-x: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000073;
+    z-index: 1;
+}
+
+.mainContent {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.heroText {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.heroTitle {
+    color: white;
+    font-weight: 100;
+    font-size: 2rem !important;
+    margin-left: 22rem !important;
+    margin-top: 11rem !important;
+    line-height: 1;
+    margin: 0;
+    width: 100%;
+    max-width: 55%;
+    word-wrap: break-word;
+    font-family: 'MyCustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+}
+
+.buttonContainer {
+
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.viewWorksButton {
+    margin-top: 30px !important;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    border: none;
+    background: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.783);
+    padding: 0px 2px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.viewWorksButton:hover .arrowIcon {
+    transform: translateY(2px);
+}
+
+.buttonText {
+    text-transform: capitalize;
+    margin-right: 17px;
+    font-weight: 400;
+    font-family: 'MyCustomFont';
+}
+
+.arrowIcon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.largeTitleContainer {
+    padding-top: -1rem !important;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.largeTitle {
+    color: white;
+    font-family: 'customBold';
+    font-size: 9.5rem !important;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+/* Mobile First Approach - Base styles for mobile */
+.heroTitle {
+    font-size: 1.125rem;
+}
+
+.largeTitle {
+    font-size: 2rem;
+}
+
+.buttonText {
+    font-size: 0.8rem;
+}
+
+.arrowIcon {
+    width: 14px;
+    height: 14px;
+}
+
+/* Small Mobile - 350px and above */
+@media (min-width: 350px) {
+    .heroTitle {
+        font-size: 1.25rem;
+    }
+
+    .largeTitle {
+        font-size: 2.25rem;
+    }
+
+    .buttonText {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile - 480px and above */
+@media (min-width: 480px) {
+    .heroTitle {
+        font-size: 1.375rem;
+    }
+
+    .largeTitle {
+        font-size: 2.5rem;
+    }
+
+    .buttonText {
+        font-size: 0.875rem;
+    }
+
+    .arrowIcon {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Small Tablet - 640px and above */
+@media (min-width: 640px) {
+    .heroTitle {
+        font-size: 1.625rem;
+    }
+
+    .largeTitle {
+        font-size: 3rem;
+    }
+
+    .buttonText {
+        font-size: 1rem;
+    }
+
+    .arrowIcon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Tablet - 768px and above */
+@media (min-width: 768px) {
+    .heroTitle {
+        font-size: 1.875rem;
+    }
+
+    .largeTitle {
+        font-size: 3.75rem;
+    }
+
+    .buttonText {
+        font-size: 1.1rem;
+    }
+
+    .arrowIcon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Small Desktop - 1024px and above */
+@media (min-width: 1024px) {
+    .heroTitle {
+        font-size: 2.25rem;
+    }
+
+    .largeTitle {
+        font-size: 4.5rem;
+    }
+
+    .buttonText {
+        font-size: 1.25rem;
+    }
+
+    .mainContent {
+        padding: 3rem 2rem;
+    }
+}
+
+/* 1200px and above - Special layout positioning */
+@media (min-width: 1200px) {
+    .mainContent {
+        justify-content: space-between;
+        padding: 4rem 2rem 3rem 2rem;
+        height: 100vh;
+    }
+
+    .heroText {
+        /* First div - upper area */
+        margin-top: 0;
+        margin-bottom: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+    }
+
+    .buttonContainer {
+        /* Second div - middle area */
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .largeTitleContainer {
+        /* Third div - bottom area */
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+    }
+}
+
+/* Desktop - 1280px and above */
+@media (min-width: 1280px) {
+    .heroTitle {
+        font-size: 2.625rem;
+    }
+
+    .largeTitle {
+        font-size: 5.5rem;
+    }
+
+    .buttonText {
+        font-size: 1.5rem;
+    }
+
+    .mainContent {
+        padding: 4rem 2rem 3rem 2rem;
+        height: 100vh;
+    }
+}
+
+/* Large Desktop - 1536px and above */
+@media (min-width: 1536px) {
+    .heroTitle {
+        font-size: 3rem;
+    }
+
+    .largeTitle {
+        font-size: 6.5rem;
+    }
+
+    .buttonText {
+        font-size: 1.75rem;
+    }
+}
+
+/* Very Large Desktop - 1920px and above */
+@media (min-width: 1920px) {
+    .heroTitle {
+        font-size: 3.5rem;
+    }
+
+    .largeTitle {
+        font-size: 8rem;
+    }
+
+    .buttonText {
+        font-size: 2rem;
+    }
+
+    .mainContent {
+        padding: 5rem 3rem 4rem 3rem;
+        height: 100vh;
+    }
+}
