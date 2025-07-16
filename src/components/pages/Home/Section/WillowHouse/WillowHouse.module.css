@@ -1,0 +1,270 @@
+/* WillowHouse.module.css */
+.container {
+    position: relative;
+    min-height: 100vh;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #d2d3d3 0%, #d2d3d3 100%);
+    overflow-x: hidden;
+}
+
+.backgroundText {
+    position:fixed;
+    top: 40%;
+    right: 129px !important;
+    transform: translateY(-50%);
+    font-family: 'MyCustomFont', sans-serif;
+    font-size: 200px;
+    font-weight: 900;
+    color: rgba(26, 25, 25, 0.05);
+    z-index: 1;
+    pointer-events: none;
+    letter-spacing: 1px;
+}
+
+.gallery {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projectCard {
+
+    height: 400px;
+    padding: 15px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 80px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.overlay {
+    position: absolute !important;
+    top: 10 !important;
+    left: 20px;
+    bottom: 20px;
+    width: 25px;
+    height: 25px;
+    border-bottom: 4px solid rgb(248, 247, 247);
+    border-left: 4px solid rgb(254, 253, 253);
+    z-index: 8;
+}
+
+.overlaytwo {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px;
+    bottom: 0px;
+    width: 25px;
+    height: 25px;
+    border-right: 4px solid rgb(248, 247, 247);
+    border-top: 4px solid rgb(254, 253, 253);
+    z-index: 8;
+}
+
+.left {
+    margin-right: auto;
+    margin-left: 0;
+    max-width: 800px;
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 800px;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+    /* transition: transform 0.3s ease; */
+}
+
+
+
+.projectImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .projectCard:hover .projectImage {
+    transform: scale(1.05);
+} */
+
+.projectInfo {
+    padding: 10px 20px;
+    position: relative;
+}
+
+.projectTitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    /* margin-bottom: 15px; */
+    line-height: 1.2;
+}
+
+.projectDescription {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    /* margin-bottom: 20px; */
+}
+
+.projectYear {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #7f8c8d;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Mobile Responsive - 300px and below */
+@media (max-width: 300px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .backgroundText {
+        font-size: 80px;
+        right: -40px;
+        letter-spacing: -5px;
+    }
+
+    .projectCard {
+        margin-bottom: 30px;
+        border-radius: 15px;
+    }
+
+    .left,
+    .right {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .imageContainer {
+        height: 200px;
+    }
+
+    .projectInfo {
+        padding: 20px 15px;
+    }
+
+    .projectTitle {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .projectDescription {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .projectYear {
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Tablet and Small Desktop */
+@media (min-width: 301px) and (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .backgroundText {
+        font-size: 120px;
+        right: -60px;
+        letter-spacing: -7px;
+    }
+
+    .projectCard {
+        margin-bottom: 40px;
+    }
+
+    .left,
+    .right {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .imageContainer {
+        height: 250px;
+    }
+
+    .projectInfo {
+        padding: 25px 20px;
+    }
+
+    .projectTitle {
+        font-size: 24px;
+    }
+
+    .projectDescription {
+        font-size: 15px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 769px) {
+    .backgroundText {
+        font-size: 200px;
+        right: -100px;
+    }
+
+    .gallery {
+        padding: 0 40px;
+    }
+}
+
+/* Animation for cards appearing */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projectCard {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.projectCard:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.projectCard:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.projectCard:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.projectCard:nth-child(4) {
+    animation-delay: 0.4s;
+}
