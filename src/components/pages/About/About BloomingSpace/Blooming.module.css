@@ -14,12 +14,12 @@
 
 .container {
     position: relative;
-    min-height: 600px !important;
+    min-height: 650px !important;
     width: 100%;
-    background-size: 200cqmin;
+    background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    background-position: center;
+    background-position: center center;
     overflow-x: hidden;
 }
 
@@ -30,8 +30,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #00000073;
-    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -54,21 +53,25 @@
     margin-bottom: 2rem;
     width: 100%;
     max-width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
 .heroTitle {
-    color: #fff     ;
+    color: #ffffff !important;
     font-weight: 100;
-    font-size: 2rem !important;
+    font-size: 2.2rem !important;
     margin-left: 38rem !important;
     margin-top: 11rem !important;
-    line-height: 1;
+    line-height: 1.2;
     margin: 0;
     width: 100%;
     max-width: 55%;
     word-wrap: break-word;
     font-family: 'MyCustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
+    position: relative;
+    z-index: 2;
 }
 
 .largeTitleContainer {
@@ -77,14 +80,150 @@
     width: 100%;
     max-width: 100%;
     margin-left: -5rem !important;
+    position: relative;
+    z-index: 2;
 }
 
 .largeTitle {
-    color: white !important;
+    color: #ffffff !important;
     font-family: 'customBold';
     font-size: 5rem !important;
     margin: 0;
     width: 100%;
     max-width: 100%;
     word-wrap: break-word;
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .container {
+        min-height: 500px !important;
+    }
+
+    .heroTitle {
+        font-size: 1.4rem !important;
+        margin-left: 12.5rem !important;
+        margin-top: 8rem !important;
+        max-width: 70%;
+    }
+
+    .largeTitleContainer {
+        margin-top: 11rem !important;
+        margin-left: -2rem !important;
+    }
+
+    .largeTitle {
+        font-size: 4.2rem !important;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 480px) {
+    .container {
+        min-height: 600px !important;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .heroText {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .heroTitle {
+        font-size: 1.3rem !important;
+        margin-left: 23px !important;
+        margin-top: 15rem !important;
+        max-width: 90%;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .largeTitleContainer {
+        margin-top: 10rem !important;
+        margin-left: 0 !important;
+        text-align: center;
+    }
+
+    .largeTitle {
+        font-size: 3rem !important;
+    }
+}
+
+/* Mobile Medium */
+@media (max-width: 375px) {
+    .container {
+        min-height: 550px !important;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .heroTitle {
+        font-size: 1.2rem !important;
+        margin-top: 13rem !important;
+        max-width: 95%;
+    }
+
+    .largeTitleContainer {
+        margin-top: 9rem !important;
+    }
+
+    .largeTitle {
+        font-size: 2.25rem !important;
+    }
+}
+
+/* Mobile Small - 300px */
+@media (max-width: 300px) {
+    .container {
+        min-height: 600px !important;
+        padding: 1rem 0.5rem;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .heroText {
+        margin-bottom: 1rem;
+    }
+
+    .heroTitle {
+        font-size: 0.85rem !important;
+        margin-top: 12rem !important;
+        margin-right: 0 !important;
+        margin-left: -1px !important;
+        max-width: 100%;
+        line-height: 1.3;
+        padding: 0 0rem;
+    }
+
+    .largeTitleContainer {
+        margin-top: 12rem !important;
+        padding: 0 0.5rem;
+    }
+
+    .largeTitle {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+}
+
+/* Extra Small - Below 300px */
+@media (max-width: 280px) {
+    .heroTitle {
+        font-size: 0.9rem !important;
+        margin-top: 15rem !important;
+    }
+
+    .largeTitleContainer {
+        margin-top: 10rem !important;
+    }
+
+    .largeTitle {
+        font-size: 1.3rem !important;
+    }
 }

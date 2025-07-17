@@ -7,8 +7,9 @@ import {
 import { useNavigate } from 'react-router-dom';
 import AppLayout from '../Layout/AppLayout';
 import HomePage from '../pages/Home/HomePage';
-import About from '../pages/About/About.JSX';
+import About from '../pages/About/About';
 import Work from '../pages/Work/Work';
+import DetailsWork from '../pages/DetailsWork/DetailsWork';
 
 function Navbar() {
     const router = createHashRouter([
@@ -27,6 +28,14 @@ function Navbar() {
                 {
                     path: "/Work",
                     element: <Work />
+                },
+                {
+                    path: "/Work/:id",
+                    element: <DetailsWork />
+                },
+                {
+                    path: "/Service",
+                    element: <DetailsWork />
                 }
 
             ]

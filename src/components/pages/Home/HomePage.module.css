@@ -43,10 +43,12 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 2rem 1rem;
+    padding: 5rem 3rem 4rem 3rem;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+    height: 100vh;
+    justify-content: space-between;
 }
 
 .heroText {
@@ -54,30 +56,35 @@
     margin-bottom: 2rem;
     width: 100%;
     max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
 }
 
 .heroTitle {
     color: white;
     font-weight: 100;
-    font-size: 2rem !important;
-    margin-left: 22rem !important;
-    margin-top: 11rem !important;
+    font-size: 1.9rem !important;
+    margin-left: 19rem !important;
+    margin-top: 9rem !important;
     line-height: 1;
     margin: 0;
     width: 100%;
     max-width: 55%;
     word-wrap: break-word;
     font-family: 'MyCustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-
 }
 
 .buttonContainer {
-
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .viewWorksButton {
@@ -103,6 +110,7 @@
     margin-right: 17px;
     font-weight: 400;
     font-family: 'MyCustomFont';
+    font-size: 2rem;
 }
 
 .arrowIcon {
@@ -116,168 +124,40 @@
     text-align: center;
     width: 100%;
     max-width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
 }
 
 .largeTitle {
     color: white;
     font-family: 'customBold';
-    font-size: 9.5rem !important;
+    font-size: 8rem !important;
     margin: 0;
     width: 100%;
     max-width: 100%;
     word-wrap: break-word;
 }
 
-/* Mobile First Approach - Base styles for mobile */
-.heroTitle {
-    font-size: 1.125rem;
-}
-
-.largeTitle {
-    font-size: 2rem;
-}
-
-.buttonText {
-    font-size: 0.8rem;
-}
-
-.arrowIcon {
-    width: 14px;
-    height: 14px;
-}
-
-/* Small Mobile - 350px and above */
-@media (min-width: 350px) {
+/* Large Desktop - 1919px and below */
+@media (max-width: 1919px) {
     .heroTitle {
-        font-size: 1.25rem;
-    }
-
-    .largeTitle {
-        font-size: 2.25rem;
-    }
-
-    .buttonText {
-        font-size: 0.85rem;
-    }
-}
-
-/* Mobile - 480px and above */
-@media (min-width: 480px) {
-    .heroTitle {
-        font-size: 1.375rem;
-    }
-
-    .largeTitle {
-        font-size: 2.5rem;
-    }
-
-    .buttonText {
-        font-size: 0.875rem;
-    }
-
-    .arrowIcon {
-        width: 16px;
-        height: 16px;
-    }
-}
-
-/* Small Tablet - 640px and above */
-@media (min-width: 640px) {
-    .heroTitle {
-        font-size: 1.625rem;
-    }
-
-    .largeTitle {
         font-size: 3rem;
     }
 
-    .buttonText {
-        font-size: 1rem;
-    }
-
-    .arrowIcon {
-        width: 18px;
-        height: 18px;
-    }
-}
-
-/* Tablet - 768px and above */
-@media (min-width: 768px) {
-    .heroTitle {
-        font-size: 1.875rem;
-    }
-
     .largeTitle {
-        font-size: 3.75rem;
+        font-size: 6.5rem;
     }
 
     .buttonText {
-        font-size: 1.1rem;
-    }
-
-    .arrowIcon {
-        width: 20px;
-        height: 20px;
+        font-size: 1.75rem;
     }
 }
 
-/* Small Desktop - 1024px and above */
-@media (min-width: 1024px) {
-    .heroTitle {
-        font-size: 2.25rem;
-    }
-
-    .largeTitle {
-        font-size: 4.5rem;
-    }
-
-    .buttonText {
-        font-size: 1.25rem;
-    }
-
-    .mainContent {
-        padding: 3rem 2rem;
-    }
-}
-
-/* 1200px and above - Special layout positioning */
-@media (min-width: 1200px) {
-    .mainContent {
-        justify-content: space-between;
-        padding: 4rem 2rem 3rem 2rem;
-        height: 100vh;
-    }
-
-    .heroText {
-        /* First div - upper area */
-        margin-top: 0;
-        margin-bottom: 0;
-        flex-shrink: 0;
-        flex-basis: auto;
-    }
-
-    .buttonContainer {
-        /* Second div - middle area */
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 0;
-        margin-top: 0;
-    }
-
-    .largeTitleContainer {
-        /* Third div - bottom area */
-        margin-top: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        flex-shrink: 0;
-        flex-basis: auto;
-    }
-}
-
-/* Desktop - 1280px and above */
-@media (min-width: 1280px) {
+/* Large Desktop - 1535px and below */
+@media (max-width: 1535px) {
     .heroTitle {
         font-size: 2.625rem;
     }
@@ -296,37 +176,266 @@
     }
 }
 
-/* Large Desktop - 1536px and above */
-@media (min-width: 1536px) {
+/* Desktop - 1279px and below */
+@media (max-width: 1279px) {
     .heroTitle {
-        font-size: 3rem;
+        margin-top: 14rem !important;
+        margin-left: 20rem !important;
+        font-size: 1.6rem !important;
+    }
+
+    .viewWorksButton {
+        margin-top: -90px !important;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        border: none;
+        background: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.783);
+        padding: 0px 2px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .arrowIcon {
+        width: 25px;
+        height: 28px;
+        transition: transform 0.3s ease;
     }
 
     .largeTitle {
-        font-size: 6.5rem;
+        font-size: 4.5rem;
     }
 
     .buttonText {
-        font-size: 1.75rem;
-    }
-}
-
-/* Very Large Desktop - 1920px and above */
-@media (min-width: 1920px) {
-    .heroTitle {
-        font-size: 3.5rem;
-    }
-
-    .largeTitle {
-        font-size: 8rem;
-    }
-
-    .buttonText {
-        font-size: 2rem;
+        font-size: rem;
     }
 
     .mainContent {
-        padding: 5rem 3rem 4rem 3rem;
-        height: 100vh;
+        padding: 3rem 2rem;
+    }
+}
+
+/* 1199px and below - Remove special layout positioning */
+@media (max-width: 1199px) {
+    .heroTitle {
+        margin-top: 14rem !important;
+        margin-left: 20rem !important;
+        font-size: 1.6rem !important;
+    }
+
+
+    .viewWorksButton {
+        margin-top: -90px !important;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        border: none;
+        background: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.783);
+        padding: 0px 2px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .arrowIcon {
+        width: 25px;
+        height: 28px;
+        transition: transform 0.3s ease;
+    }
+
+    .largeTitle {
+        font-size: 4.5rem;
+    }
+
+    .buttonText {
+        font-size: rem;
+    }
+
+    .mainContent {
+        padding: 3rem 2rem;
+    }
+
+}
+
+/* Small Desktop - 1023px and below */
+@media (max-width: 1023px) {
+    .heroTitle {
+        margin-top: 10rem !important;
+        margin-left: 16rem !important;
+        font-size: 1.5rem !important;
+    }
+
+    .largeTitle {
+        font-size: 6.75rem !important;
+    }
+
+    .viewWorksButton {
+        margin-top: -110px !important;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        border: none;
+        background: none;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.783);
+        padding: 0px 2px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .arrowIcon {
+        width: 25px;
+        height: 28px;
+        transition: transform 0.3s ease;
+    }
+
+    .buttonText {
+        font-size: 1.1rem !important;
+    }
+
+    .arrowIcon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Tablet - 767px and below */
+@media (max-width: 767px) {
+    .container {
+        background-size: 900px 700px;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+        background-position: center;
+    }
+
+    .heroTitle {
+        margin-top: 9.5rem !important;
+        margin-left: 11rem !important;
+        font-size: 0.9rem !important;
+        font-weight: 100;
+    }
+
+    .viewWorksButton {
+        margin-top: -100px !important;
+    }
+
+    .largeTitle {
+        font-size: 5rem !important;
+    }
+
+    .buttonText {
+        font-size: 1rem;
+    }
+
+    .arrowIcon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Small Tablet - 639px and below */
+@media (max-width: 639px) {
+    .container {
+        background-size: 700px 700px;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+        background-position: center;
+    }
+
+    .heroTitle {
+        margin-top: 9rem !important;
+        margin-left: 9rem !important;
+        font-size: 0.8rem !important;
+        font-weight: 100;
+    }
+
+    .viewWorksButton {
+        margin-top: -100px !important;
+    }
+
+    .largeTitle {
+        font-size: 4rem !important;
+    }
+
+    .buttonText {
+        font-size: 1rem;
+    }
+
+    .arrowIcon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Mobile - 479px and below */
+@media (max-width: 479px) {
+    .container {
+        background-size: 600px 700px;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+        background-position: center;
+    }
+
+    .heroTitle {
+        max-width: 70% !important;
+        margin-top: 9.5rem !important;
+        margin-left: 5rem !important;
+        font-size: 15px !important;
+        font-weight: 100;
+    }
+
+    .viewWorksButton {
+        margin-top: -100px !important;
+    }
+
+    .largeTitle {
+        font-size: 3rem !important;
+    }
+
+    .buttonText {
+        font-size: 1rem;
+    }
+
+    .arrowIcon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Small Mobile - 349px and below */
+@media (max-width: 349px) {
+    .container {
+        background-size: 400px 700px;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+        background-position: center;
+    }
+
+    .heroTitle {
+        max-width: 70% !important;
+        margin-top: 9rem !important;
+        margin-left: 3rem !important;
+        font-size: 15px !important;
+        font-weight: 100;
+    }
+
+    .viewWorksButton {
+        margin-top: -80px !important;
+    }
+
+    .largeTitle {
+        font-size: 4rem !important;
+    }
+
+    .buttonText {
+        font-size: 1rem;
+    }
+
+    .arrowIcon {
+        width: 18px;
+        height: 18px;
     }
 }

@@ -126,7 +126,7 @@ const ContactForm = () => {
                                 onChange={handleInputChange}
                                 className="form-textarea"
                                 placeholder="Enter Your Message"
-                                rows="3"
+                                rows="2"
                             />
                             {errors.message && <span className="error-message">{errors.message}</span>}
                         </div>
