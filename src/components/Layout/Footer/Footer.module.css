@@ -29,6 +29,7 @@
 
 /* Brand Section */
 .brandSection {
+    margin-top: 0 !important;
     height: 200px;
     margin-bottom: 60px;
 }
@@ -184,9 +185,53 @@
     text-decoration: underline;
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Brand Section */
+    .brandSection {
+        margin-top: -220px !important;
+        height: 200px;
+        margin-bottom: 60px;
+    }
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        gap: 2rem !important;
+        padding: 10px 10px;
+    }
+
+    .logo {
+        margin-top: -0px;
+        width: 400px !important;
+        height: 180px !important;
+        object-fit: cover;
+    }
+
+    .brandName {
+        font-family: 'customBold' !important;
+        line-height: 1;
+        font-size: 7rem !important;
+        font-weight: bold;
+        margin: 0;
+        color: #ffffff;
+    }
+
+    .divider {
+        background-color: #1A1A1A;
+        /* border: 1px solid red;    */
+        padding: 10px 15px;
+        height: 230px !important;
+        margin-bottom: 50px;
+        margin-top: 30px !important;
+    }
+
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer {
+        height: 00px !important;
         padding: 30px 0 15px;
     }
 
@@ -194,8 +239,35 @@
         padding: 0 15px;
     }
 
+    .brandSection {
+        margin-top: 100px !important;
+        height: 200px;
+        margin-bottom: 60px;
+    }
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        gap: 3rem !important;
+        padding: 10px 10px;
+    }
+
     .brandName {
-        font-size: 2rem;
+        font-size: 5rem !important;
+    }
+
+    .contactLabel {
+        color: #ff6b35;
+        font-size: 1.3rem !important;
+        margin-bottom: 10px;
+        font-style: 'MyCustomFont';
+        font-weight: bold;
+    }
+
+    .contactValue {
+        color: #ffffff;
+        margin-top: 10px;
+        font-size: 1.1rem !important;
     }
 
     .navList {
@@ -204,24 +276,67 @@
     }
 
     .contactInfo {
-        flex-direction: column;
+        flex-direction: row;
         gap: 20px;
     }
 
     .copyright {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+        /* height: 50px; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        font-size: 1.2rem;
+        color: #cccccc;
     }
 }
 
 @media (max-width: 480px) {
     .footer {
-        padding: 20px 0 10px;
+        height: 800px !important;
+        padding: 20px 0 10px !important;
     }
 
     .container {
-        padding: 0 10px;
+        padding: 0 10px !important;
+    }
+
+    .brandSection {
+        margin-top: 0px !important;
+        height: 200px;
+        margin-bottom: 150px !important;
+    }
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 10px;
+    }
+
+    .logo {
+        margin-top: -0px;
+        width: 300px !important;
+        height: 180px !important;
+        object-fit: cover;
+    }
+
+
+    .brandName {
+        font-family: 'customBold' !important;
+        line-height: 0 px !important;
+        font-size: 11rem;
+        font-weight: bold;
+        margin: 0;
+        color: #ffffff;
+    }
+
+    .divider {
+        background-color: #1A1A1A;
+        padding: 10px 15px;
+        height: 450px !important;
+        margin-bottom: 50px;
+        margin-top: 30px !important;
     }
 
     .logoContainer {
@@ -232,29 +347,39 @@
 
     .logo {
         width: 60px;
-        height: 45px;
+        height: 55px;
     }
 
     .brandName {
         font-size: 1.5rem;
     }
 
-    .navList {
+    .navigationSection {
         flex-direction: column;
-        gap: 15px;
+        gap: 5px !important;
+        text-align: center;
+    }
+
+    .navList {
+        flex-direction: row;
+        gap: 20px !important;
         text-align: center;
     }
 
     .contactInfo {
-        gap: 15px;
+        flex-direction: column !important;
+        gap: 20px;
     }
 
     .contactItem {
-        text-align: center;
+        width: 100%;
+        flex-direction: row !important;
+        gap: 5px;
     }
 
+
     .socialMedia {
-        justify-content: center;
+        justify-content: end;
     }
 
     .socialIcon {
@@ -262,50 +387,152 @@
         height: 30px;
         font-size: 1rem;
     }
-}
-
-@media (max-width: 320px) {
-    .footer {
-        padding: 15px 0 8px;
-    }
-
-    .container {
-        padding: 0 8px;
-    }
-
-    .brandName {
-        font-size: 1.3rem;
-    }
-
-    .navList {
-        gap: 12px;
-    }
-
-    .navLink {
-        font-size: 0.9rem;
-    }
 
     .contactInfo {
-        gap: 12px;
+        flex-direction: row;
+        gap: 20px;
     }
 
-    .contactLabel,
+    .contactLabel {
+        color: #ff6b35;
+        font-size: 2rem !important;
+        justify-content: center;
+        margin-bottom: 0px !important;
+
+    }
+
     .contactValue {
-        font-size: 0.8rem;
-    }
-
-    .socialMedia {
-        gap: 10px;
-    }
-
-    .socialIcon {
-        width: 28px;
-        height: 28px;
-        font-size: 0.9rem;
+        color: #ffffff;
+        margin-top: 10px;
+        font-size: 1.5rem !important;
     }
 
     .copyright {
-        font-size: 0.75rem;
+        /* height: 50px; */
+        flex-direction: column;
+        padding-top: 20px;
+        font-size: 1.5rem;
+        color: #cccccc;
+    }
+}
+
+@media (max-width: 360px) {
+    .footer {
+        height: 1050px !important;
+        padding: 20px 0 10px !important;
+    }
+
+    .container {
+        padding: 0 10px !important;
+    }
+
+    .brandSection {
+        margin-top: 80px !important;
+        height: 250px;
+        margin-bottom: 150px !important;
+    }
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 10px;
+    }
+
+    .logo {
+        margin-top: -0px;
+        width: 300px !important;
+        height: 180px !important;
+        object-fit: cover;
+    }
+
+
+    .brandName {
+        font-family: 'customBold' !important;
+        line-height: 0 px !important;
+        font-size: 4.3rem !important;
+        font-weight: bold;
+        margin: 0;
+        color: #ffffff;
+    }
+
+    .divider {
+        background-color: #1A1A1A;
+        padding: 10px 15px;
+        height: 600px !important;
+        margin-bottom: 50px;
+        margin-top: 30px !important;
+    }
+
+    .logoContainer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 55px;
+    }
+    .navigationSection {
+        flex-direction: row;
+        gap: 5px !important;
+        text-align: center;
+    }
+
+    .navList {
+        flex-direction: column;
+        gap: 20px !important;
+        text-align: center;
+    }
+
+    .contactInfo {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .contactItem {
+        width: 100%;
+        flex-direction: row !important;
+        gap: 5px;
+    }
+
+
+    .socialMedia {
+        justify-content: end;
+    }
+
+    .socialIcon {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .contactInfo {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .contactLabel {
+        color: #ff6b35;
+        font-size: 1.5rem !important;
+        justify-content: center;
+        margin-bottom: 0px !important;
+
+    }
+
+    .contactValue {
+        color: #ffffff;
+        margin-top: 10px;
+        font-size: 1.2rem !important;
+    }
+
+    .copyright {
+        /* height: 50px; */
+        flex-direction: column;
+        padding-top: 20px;
+        font-size: 1.2rem;
+        color: #cccccc;
     }
 }
 

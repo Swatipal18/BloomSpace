@@ -39,7 +39,7 @@ const FAQ = () => {
 
     return (
         <div
-            className="containera"
+            className="container-fluid"
             style={{ backgroundImage: `url(${bg})` }}
         >
             <div className="faq-container">
