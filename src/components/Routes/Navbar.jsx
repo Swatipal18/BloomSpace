@@ -10,6 +10,7 @@ import HomePage from '../pages/Home/HomePage';
 import About from '../pages/About/About';
 import Work from '../pages/Work/Work';
 import DetailsWork from '../pages/DetailsWork/DetailsWork';
+import PageNotFound from '../PageNotFound/PageNotFound';
 
 function Navbar() {
     const router = createHashRouter([
@@ -39,7 +40,10 @@ function Navbar() {
                 }
 
             ]
-        },
+        }, {
+            path: "*",
+            element: <PageNotFound />
+        }
     ])
     return <RouterProvider router={router} />
 }

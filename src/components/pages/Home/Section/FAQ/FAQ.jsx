@@ -4,8 +4,7 @@ import './FAQ.css';
 import bg from '../../../../../assets/bg-image.png';
 
 const FAQ = () => {
-    const [openItem, setOpenItem] = useState(0); // First item open by default
-
+    const [openItem, setOpenItem] = useState(0); 
     const faqData = [
         {
             question: "Do you work with specific contractors or builders?",
