@@ -152,11 +152,11 @@ const Footer = () => {
                         <div className={styles.copyright}>
                             <div className={styles.copyrightLeft}>
                                 <span>Copyright © 2025 </span>
-                                <a href="#" className={styles.brandLink}>Blooming Space</a>
+                                <a href="" className={styles.brandLink}>Blooming Space</a>
                             </div>
                             <div className={styles.copyrightRight}>
                                 <span>Design & Developed By </span>
-                                <a href="#" className={styles.brandLink}>Nexara Tech</a>
+                                <a href="" className={styles.brandLink}>Nexara Tech</a>
                             </div>
                         </div>
                     </div>

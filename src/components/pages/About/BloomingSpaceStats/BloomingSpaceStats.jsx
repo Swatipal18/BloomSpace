@@ -75,7 +75,7 @@ const BloomingSpaceStats = () => {
     return (
         <div ref={sectionRef} className="stats-section">
             <div className="container">
-                <div className='d-flex justify-content-space-between gap-5'>
+                <div className='d-flex justify-content-space-between gap-5 intro'>
                     <div className="mission-badge">
                         <span className="badge-text">OUR MISSION</span>
                     </div>

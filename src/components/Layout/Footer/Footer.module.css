@@ -182,7 +182,8 @@
 }
 
 .brandLink:hover {
-    text-decoration: underline;
+    color: #ff6b35ae;
+    text-decoration: none;
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -474,6 +475,7 @@
         width: 60px;
         height: 55px;
     }
+
     .navigationSection {
         flex-direction: row;
         gap: 5px !important;

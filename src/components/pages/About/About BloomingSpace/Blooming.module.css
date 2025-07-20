@@ -164,17 +164,17 @@
     }
 
     .heroTitle {
-        font-size: 1.2rem !important;
+        font-size: 1.39rem !important;
         margin-top: 13rem !important;
-        max-width: 95%;
+        max-width: 85%;
     }
 
     .largeTitleContainer {
-        margin-top: 9rem !important;
+        margin-top: 8rem !important;
     }
 
     .largeTitle {
-        font-size: 2.25rem !important;
+        font-size: 1.8rem !important;
     }
 }
 
