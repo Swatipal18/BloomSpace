@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ContactForm.css';
+import bg from '../../../assets/bg-black.png';
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -79,7 +80,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="contact-container">
+        <div className="contact-container" style={{ backgroundImage: `url(${bg})` }}>
             <div className="contact-wrapper">
                 <div className="contact-header">
                     <div className="red-box"></div>

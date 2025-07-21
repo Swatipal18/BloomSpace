@@ -37,7 +37,7 @@ const TestimonialSlider = () => {
         if (isAutoPlaying) {
             const interval = setInterval(() => {
                 setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-            }, 4000);
+            },2000);
 
             return () => clearInterval(interval);
         }

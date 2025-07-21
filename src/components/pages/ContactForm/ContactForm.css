@@ -15,7 +15,10 @@
        .contact-container {
            background-color: #000000;
            min-height: 100vh;
+           padding: 20px 40px;
+           position: relative;
            font-family: 'MyCustomFont', sans-serif;
+           z-index: 28 !important;
 
        }
 

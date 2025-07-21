@@ -4,7 +4,7 @@ import './FAQ.css';
 import bg from '../../../../../assets/bg-image.png';
 
 const FAQ = () => {
-    const [openItem, setOpenItem] = useState(0); 
+    const [openItem, setOpenItem] = useState(0);
     const faqData = [
         {
             question: "Do you work with specific contractors or builders?",
@@ -44,9 +44,8 @@ const FAQ = () => {
             <div className="faq-container">
                 <div className="faq-content">
                     <div className="faq-left">
-                        <div className="faq-badge">
-                            <span className="faq-icon"></span>
-                            FAQ
+                        <div className="mission-badge">
+                            <span className="badge-title">FAQ</span>
                         </div>
                         <h1 className="faq-title">
                             Your Questions,<br />

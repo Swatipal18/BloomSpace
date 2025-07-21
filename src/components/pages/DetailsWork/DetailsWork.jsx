@@ -6,7 +6,7 @@ import MoreViews from './MoreViews/MoreViews';
 const DetailsWork = () => {
     const location = useLocation();
     const project = location.state?.project;
-    console.log('project: ', project);
+    // console.log('project: ', project);
 
     // Fallback data if no project is passed
     const defaultProject = {
@@ -128,7 +128,7 @@ const DetailsWork = () => {
             </div>
 
             {/* More to View */}
-            < MoreViews />
+            < MoreViews currentProject={currentProject} />
         </div >
     );
 };

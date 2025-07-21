@@ -1,4 +1,24 @@
-/* WillowHouse.module.css */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../../../assets/Fonts/Founders_Grotesk/FoundersGrotesk-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'customBold';
+    src: url('../../../assets/Fonts/ABC Diatype/Web Fonts/4c4a87973ef80fc72049e01b9085fadc.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Custom';
+    src: url('../../../../assets/Fonts/Founders_Grotesk/FoundersGrotesk-Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .container {
     position: relative;
     min-height: 100vh;
@@ -8,14 +28,14 @@
 }
 
 .backgroundText {
-    position:fixed;
+    position: fixed;
     top: 40%;
     right: 129px !important;
     transform: translateY(-50%);
     font-family: 'MyCustomFont', sans-serif;
     font-size: 200px;
     font-weight: 900;
-    color: rgba(26, 25, 25, 0.05);
+    color: rgba(26, 25, 25, 0.285);
     z-index: 1;
     pointer-events: none;
     letter-spacing: 1px;
@@ -87,7 +107,7 @@
     height: 300px;
     overflow: hidden;
     object-fit: cover;
-    /* transition: transform 0.3s ease; */
+    transition: transform 0.3s ease;
 }
 
 
@@ -99,9 +119,9 @@
     object-fit: cover;
 }
 
-/* .projectCard:hover .projectImage {
+.projectCard:hover .projectImage {
     transform: scale(1.05);
-} */
+}
 
 .projectInfo {
     padding: 10px 20px;
@@ -109,28 +129,32 @@
 }
 
 .projectTitle {
-    font-size: 28px;
-    font-weight: 700;
-    color: #2c3e50;
-    /* margin-bottom: 15px; */
+    font-family: 'Custom';
+    font-size: 30px;
+    font-weight: bolder;
+    color: #000000;
     line-height: 1.2;
 }
 
 .projectDescription {
-    font-size: 16px;
-    color: #7f8c8d;
-    line-height: 1.6;
+    font-family: 'MyCustomFont' !important;
+    font-size: 25px;
+    color: #403f3f9f;
+    line-height: 1;
     /* margin-bottom: 20px; */
 }
 
 .projectYear {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: -15px;
     color: #7f8c8d;
     padding: 8px 16px;
+    text-align: right;
     border-radius: 20px;
-    font-size: 14px;
+    font-family: 'MyCustomFont' !important  ;
+    font-size: 20px;
+    letter-spacing: 0.5px;
     font-weight: 600;
 }
 

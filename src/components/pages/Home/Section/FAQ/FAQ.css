@@ -29,6 +29,31 @@
         padding: 60px 20px;
     }
 
+    .mission-badge {
+        width: 90%;
+        display: inline-flex;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+
+    .mission-badge::before {
+        content: '';
+        width: 30px;
+        height: 30px;
+        background: #FF2300;
+        border-radius: 5px !important;
+        margin-right: 12px;
+        border-radius: 2px;
+    }
+
+    .badge-title {
+        font-size: 20px !important;
+        font-family: 'MyCustomFont';
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding-top: 1px;
+    }
+
     .faq-content {
         display: flex;
         gap: 60px;
@@ -138,8 +163,8 @@
     }
 
     @media (max-width: 768px) {
-        .containera {
-            height: 80vh;
+        .container-fluid {
+            height: 100vh !important;
         }
 
         .faq-content {
@@ -163,16 +188,36 @@
             font-size: 16px;
         }
     }
-@media screen and (max-width: 480px) {
-    .container-fluid {
-        height: 90vh !important;
-    }
-    
-}
-    @media (max-width: 300px) {
-        .containera {
-            height: 80vh !important;
+
+    @media (max-width: 480px) {
+        .container-fluid {
+            height: auto !important;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 18 !important;
         }
+
+        .faq-content {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+    }
+
+    @media (max-width: 300px) {
+        .container-fluid {
+            height: auto !important;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 18 !important;
+        }
+
 
         .faq-container {
             padding: 20px 15px;

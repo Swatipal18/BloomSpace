@@ -20,7 +20,6 @@
        }
 
        .container {
-           /* margin-top: -160px; */
            position: relative;
            min-height: 30vh;
            padding: 30px 20px 80px 20px !important;
@@ -52,7 +51,7 @@
            border-radius: 2px;
        }
 
-       .badge-text {
+       .badgetext {
            font-family: 'Custom';
            font-size: 15px;
            font-weight: 600;
@@ -61,7 +60,8 @@
            line-height: -1px;
        }
 
-       .main-heading {
+       .mainheading {
+           margin-top: 0 !important;
            font-size: 40px;
            font-family: 'Custom' !important;
            font-weight: 600;
@@ -70,19 +70,20 @@
        }
 
        .gallery {
-           margin-top: -6rem !important;
+           margin-top: -40px !important;
            position: relative;
            z-index: 2;
            max-width: 1200px;
            margin: 0 auto;
            display: grid;
            grid-template-columns: repeat(2, 1fr);
-           gap: 30px;
+           gap: 40px !important;
        }
 
        .projectCard {
            margin-top: 50px;
            height: 400px;
+           width: 100%;
            padding: 15px;
            background: white;
            border-radius: 2px;
@@ -116,6 +117,14 @@
            border-right: 4px solid rgb(248, 247, 247);
            border-top: 4px solid rgb(254, 253, 253);
            z-index: 8;
+       }
+
+       .description {
+           margin-top: -30px !important;
+           margin-left: 10rem;
+           font-size: 16px;
+           color: #7f8c8d;
+           line-height: 1.6;
        }
 
        .imageContainer {
@@ -167,6 +176,27 @@
        @media (max-width: 480px) {
            .container {
                padding: 15px 10px;
+           }
+
+           .header {
+               margin-top: 30px;
+           }
+
+           .description {
+               margin-top: -30px !important;
+               margin-left: 1rem;
+               font-size: 13px;
+               color: #7f8c8d;
+               line-height: 1.6;
+           }
+
+           .mainheading {
+               margin-top:2px !important;
+               font-size: 40px;
+               font-family: 'Custom' !important;
+               font-weight: 600;
+               line-height: 1.2;
+               color: #333;
            }
 
            .gallery {

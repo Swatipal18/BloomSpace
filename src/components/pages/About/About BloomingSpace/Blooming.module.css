@@ -14,9 +14,9 @@
 
 .container {
     position: relative;
-    min-height: 650px !important;
+    min-height: 600px !important;
     width: 100%;
-    background-size: cover;
+    background-size: 1600px 700px;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     background-position: center center;
@@ -75,7 +75,7 @@
 }
 
 .largeTitleContainer {
-    margin-top: 12rem !important;
+    margin-top: 8rem !important;
     text-align: right;
     width: 100%;
     max-width: 100%;
