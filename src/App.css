@@ -4,3 +4,15 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+    font-family: 'customBold';
+    src: url('../../../assets/Fonts/ABC Diatype/Web Fonts/4c4a87973ef80fc72049e01b9085fadc.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Custom';
+    src: url('../../../../assets/Fonts/Founders_Grotesk/FoundersGrotesk-Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

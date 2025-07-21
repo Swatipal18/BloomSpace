@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import styles from './Footer.module.css';
 import ContactForm from '../../pages/ContactForm/ContactForm';
 import footerImage from '../../../assets/room-house-decorated-with-brazilian-folklore-design-min.jpg'
@@ -8,6 +9,8 @@ import { FaLinkedin } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+    const location = useLocation();
+
     const scrollToContact = (e) => {
         e.preventDefault();
         const contactElement = document.getElementById('contact-form');
@@ -18,6 +21,47 @@ const Footer = () => {
             });
         }
     };
+
+    // Function to handle Services navigation and scroll
+    const scrollToServices = (e) => {
+        e.preventDefault();
+
+        // Check if we're already on the home page
+        if (location.pathname === '/') {
+            // If on home page, just scroll to services
+            const servicesElement = document.getElementById('Services');
+            if (servicesElement) {
+                servicesElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        } else {
+            // If on different page, navigate to home first, then scroll
+            // Store scroll target in sessionStorage for after navigation
+            sessionStorage.setItem('scrollToServices', 'true');
+            window.location.href = '/';
+        }
+    };
+
+    // Effect to handle scroll after navigation to home page
+    useEffect(() => {
+        // Check if we need to scroll to services after navigation
+        const shouldScrollToServices = sessionStorage.getItem('scrollToServices');
+        if (shouldScrollToServices === 'true') {
+            sessionStorage.removeItem('scrollToServices');
+            // Add a small delay to ensure the page is fully loaded
+            setTimeout(() => {
+                const servicesElement = document.getElementById('Services');
+                if (servicesElement) {
+                    servicesElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }, 100);
+        }
+    }, [location.pathname]);
 
     // Social media click handlers
     const handleInstagramClick = () => {
@@ -46,7 +90,7 @@ const Footer = () => {
     };
 
     return (
-        <>
+        <div className={styles.footerContainer}>
             <div id="contact-form">
                 <ContactForm />
             </div>
@@ -71,7 +115,7 @@ const Footer = () => {
                                     <li><Link to="/" className={styles.navLink}>Home</Link></li>
                                     <li><Link to="/About" className={styles.navLink}>About</Link></li>
                                     <li><Link to="/Work" className={styles.navLink}>Work</Link></li>
-                                    <li><Link to="#services" className={styles.navLink}>Services</Link></li>
+                                    <li><a href="#Services" onClick={scrollToServices} className={styles.navLink}>Services</a></li>
                                     <li><a href="#contact-form" onClick={scrollToContact} className={styles.navLink}>Contact</a></li>
                                 </ul>
                             </nav>
@@ -156,13 +200,13 @@ const Footer = () => {
                             </div>
                             <div className={styles.copyrightRight}>
                                 <span>Design & Developed By </span>
-                                <a href="" className={styles.brandLink}>Nexara Tech</a>
+                                <a href="https://nexoratech.in/" target='_blank' className={styles.brandLink}>Nexara Tech</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </footer>
-        </>
+        </div>
     );
 };
 

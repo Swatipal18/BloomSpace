@@ -24,6 +24,7 @@
          height: 600px;
          opacity: 1;
          overflow: hidden;
+         margin-top: -50px !important;
      }
 
      .testimonial-container {
@@ -62,7 +63,7 @@
      }
 
      .testimonial-text {
-        text-align: left;
+         text-align: left;
          width: 89%;
          font-family: 'Custom';
          font-size: 60px;
@@ -117,7 +118,7 @@
      }
 
      .slider-controls {
-        margin-bottom: -20px;
+         margin-bottom: -20px;
          display: flex;
          align-items: center;
          justify-content: center;
@@ -188,9 +189,12 @@
          height: 100%;
          object-fit: cover;
      }
-
-     /* Responsive Design - 300px तक */
      @media (max-width: 768px) {
+        .testimonial-section{
+            height: auto !important;
+            margin: 0rem 0 0 0 !important;
+        }
+
          .testimonial-content {
              flex-direction: column;
              gap: 30px;

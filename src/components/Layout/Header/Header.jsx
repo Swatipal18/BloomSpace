@@ -12,7 +12,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const location = useLocation();
 
-    // Check if current path is /Service
+    // Check if current path is /Work/ (updated condition)
     const isServicePage = /^\/Work\/[^\/]+$/.test(location.pathname);
 
     const toggleMenu = () => {
@@ -22,6 +22,15 @@ const Header = () => {
     // Function to close the modal
     const closeModal = () => {
         setIsMenuOpen(false);
+    };
+
+    // Function to handle logo click with refresh
+    const handleLogoClick = (e) => {
+        e.preventDefault();
+        closeModal(); // Close menu if open
+
+        // Navigate to home and refresh page
+        window.location.href = '/';
     };
 
     // Function to handle smooth scroll to contact form
@@ -36,6 +45,48 @@ const Header = () => {
         }
         closeModal(); // Close the menu after clicking
     };
+
+    // Function to handle Services navigation and scroll
+    const scrollToServices = (e) => {
+        e.preventDefault();
+        closeModal(); // Close the menu first
+
+        // Check if we're already on the home page
+        if (location.pathname === '/') {
+            // If on home page, just scroll to services
+            const servicesElement = document.getElementById('Services');
+            if (servicesElement) {
+                servicesElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        } else {
+            // If on different page, navigate to home first, then scroll
+            // Store scroll target in sessionStorage for after navigation
+            sessionStorage.setItem('scrollToServices', 'true');
+            window.location.href = '/';
+        }
+    };
+
+    // Effect to handle scroll after navigation to home page
+    useEffect(() => {
+        // Check if we need to scroll to services after navigation
+        const shouldScrollToServices = sessionStorage.getItem('scrollToServices');
+        if (shouldScrollToServices === 'true') {
+            sessionStorage.removeItem('scrollToServices');
+            // Add a small delay to ensure the page is fully loaded
+            setTimeout(() => {
+                const servicesElement = document.getElementById('Services');
+                if (servicesElement) {
+                    servicesElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }, 100);
+        }
+    }, [location.pathname]);
 
     // Effect to handle body scroll lock
     useEffect(() => {
@@ -55,25 +106,29 @@ const Header = () => {
             <header className={styles.header}>
                 {/* Logo */}
                 <div className={styles.logoContainer}>
-                    <Link to="/" className={styles.logoLink} onClick={closeModal}>
+                    <a href="/" className={styles.logoLink} onClick={handleLogoClick}>
                         <img
                             src={isMenuOpen ? logo : (isServicePage ? logo3 : logo2)}
                             alt="Logo"
                             className={styles.logo}
                         />
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Menu Button */}
                 <button
                     onClick={toggleMenu}
-                    className={`${styles.menuButton} ${isServicePage ? styles.menuButtonService : ''}`}
+                    className={`${styles.menuButton} ${isServicePage && !isMenuOpen ? styles.menuButtonService : ''}`}
                     aria-label="Toggle menu"
                 >
                     {isMenuOpen ? (
-                        <X size={32} strokeWidth={2} />
+                        <X size={42} strokeWidth={2} style={{ color: 'white' }} />
                     ) : (
-                        <Menu size={32} strokeWidth={2} />
+                        <Menu
+                            size={32}
+                            strokeWidth={2}
+                            style={{ color: isServicePage ? 'black' : 'white' }}
+                        />
                     )}
                 </button>
             </header>
@@ -99,10 +154,10 @@ const Header = () => {
                                 </Link>
                             </div>
                             <div className={styles.menuItem}>
-                                <Link to="/Services" className={styles.menuLink} onClick={closeModal}>
+                                <a href="#Services" onClick={scrollToServices} className={styles.menuLink}>
                                     <span className={styles.menuNumber}>03</span>
                                     <span className={styles.menuText}>Services</span>
-                                </Link>
+                                </a>
                             </div>
                             <div className={styles.menuItem}>
                                 <a href="#contact-form" onClick={scrollToContact} className={styles.menuLink}>

@@ -10,7 +10,7 @@ const ServicesSection = () => {
     const services = [
         {
             name: 'Interior Design',
-            image: img ,
+            image: img,
             description: 'Tailored layouts, materials, and styling to transform any room into a functional, beautiful space.'
         },
         {
@@ -43,8 +43,7 @@ const ServicesSection = () => {
         }}>
             <div className="services-content">
                 <div className="services-left">
-                    <div className="services-header">
-                        <div className="red-box"></div>
+                    <div className="mission-badge">
                         <span className="services-title">SERVICES</span>
                     </div>
 
@@ -58,9 +57,8 @@ const ServicesSection = () => {
                                 <div className="service-content">
                                     < FaArrowRight
                                         className={`service-arrow ${activeService === service.name ? 'active' : ''}`}
-                                        size={24}
                                     />
-                                    <span className="service-name">{service.name}</span>
+                                    <p className="service-name ">{service.name}</p>
                                 </div>
                             </div>
                         ))}

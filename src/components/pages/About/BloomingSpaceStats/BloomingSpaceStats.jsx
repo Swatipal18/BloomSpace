@@ -64,7 +64,7 @@ const BloomingSpaceStats = () => {
                 if (frame >= totalFrames) {
                     clearInterval(timer);
                     setCounters(targets);
-                    setHasAnimated(true); 
+                    setHasAnimated(true);
                 }
             }, 1000 / frameRate);
 
@@ -79,10 +79,10 @@ const BloomingSpaceStats = () => {
                     <div className="mission-badge">
                         <span className="badge-text">OUR MISSION</span>
                     </div>
-                    <h2 className="main-heading">
+                    <p className="main-heading">
                         At Blooming Space, we transform spaces with thoughtful design and care —
-                        <span className="highlight-text"> creating spaces that inspire, nurture, and reflect your unique way of living.</span>
-                    </h2>
+                        <span className='highlight'>creating spaces that inspire, nurture, and reflect your unique way of living.</span>
+                    </p>
                 </div>
                 <div className="content">
                     <div className="stats-grid">

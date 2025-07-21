@@ -9,28 +9,25 @@
     z-index: 5 !important;
 }
 
-
 /* Marquee Wrapper */
 .marqueeWrapper {
-    /* border: 1px solid white; */
     position: relative;
     width: 95%;
     margin-left: 50px;
-    z-index: 5
+    z-index: 5;
 }
 
 /* Marquee Content */
 .marqueeContent {
-
     display: flex;
-    animation: marquee 9s linear infinite;
+    animation: marquee 12s linear infinite;
 }
 
 /* Image Container */
 .imageContainer {
     flex-shrink: 0;
     margin: 0 8px;
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
 }
 
 /* Offset every third image */
@@ -38,10 +35,10 @@
     margin-top: -62px;
 }
 
-/* Image Styles */
+/* Base Image Styles - Removed !important */
 .image {
-    width: 400px !important;
-    height: 500px !important;
+    width: 400px;
+    height: 500px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -57,45 +54,64 @@
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-60%);
     }
 }
 
-/* Responsive Design */
-
-/* Large screens (1024px and up) */
-@media (min-width: 1024px) {
+@media (max-width: 299px) {
     .image {
-        width: 288px;
-        height: 216px;
+        width: 140px !important;
+        height: 105px !important;
     }
-}
 
-/* Medium screens (768px - 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .image {
-        width: 256px;
-        height: 192px;
+    .imageContainer {
+        margin: 0 3px;
     }
-}
 
-/* Small screens (640px - 767px) */
-@media (min-width: 640px) and (max-width: 767px) {
-    .image {
-        width: 224px;
-        height: 168px;
+    .offsetImage {
+        margin-top: -16px;
     }
 
     .marqueeContent {
-        animation: marquee 15s linear infinite;
+        animation: marquee 8s linear infinite;
+    }
+
+    .marqueeWrapper {
+        margin-left: 20px;
+        width: 98%;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 479px) {
+    .image {
+        width: 250px !important;
+        height: 350px !important;
+    }
+
+    .imageContainer {
+        margin: 0 4px;
+    }
+
+    .offsetImage {
+        margin-top: -20px;
+    }
+
+    .marqueeContent {
+        animation: marquee 7s linear infinite;
+    }
+
+    .marqueeWrapper {
+        margin-left: 25px;
+        width: 100%;
     }
 }
 
 /* Extra small screens (480px - 639px) */
 @media (min-width: 480px) and (max-width: 639px) {
     .image {
-        width: 192px;
-        height: 144px;
+        width: 250px !important;
+        height: 350px !important;
+        object-fit: cover;
     }
 
     .imageContainer {
@@ -109,44 +125,64 @@
     .marqueeContent {
         animation: marquee 12s linear infinite;
     }
-}
 
-/* Very small screens (300px - 479px) */
-@media (min-width: 300px) and (max-width: 479px) {
-    .image {
-        width: 160px;
-        height: 120px;
-    }
-
-    .imageContainer {
-        margin: 0 4px;
-    }
-
-    .offsetImage {
-        margin-top: -20px;
-    }
-
-    .marqueeContent {
-        animation: marquee 10s linear infinite;
+    .marqueeWrapper {
+        margin-left: 30px;
     }
 }
 
-/* Ultra small screens (below 300px) */
-@media (max-width: 299px) {
+/* Small screens (640px - 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
     .image {
-        width: 140px;
-        height: 105px;
-    }
-
-    .imageContainer {
-        margin: 0 3px;
-    }
-
-    .offsetImage {
-        margin-top: -16px;
+        width: 250px !important;
+        height: 350px !important;
     }
 
     .marqueeContent {
-        animation: marquee 8s linear infinite;
+        animation: marquee 15s linear infinite;
+    }
+
+    .marqueeWrapper {
+        margin-left: 35px;
+    }
+}
+
+/* Medium screens (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .image {
+        width: 300px !important;
+        height: 400px !important;
+    }
+
+    .marqueeWrapper {
+        margin-left: 40px;
+    }
+}
+
+/* Large screens (1024px and up) */
+@media (min-width: 1024px) {
+    .image {
+        width: 400px !important;
+        height: 500px !important;
+    }
+
+    .offsetImage {
+        margin-top: -50px;
+    }
+
+    .marqueeWrapper {
+        margin-left: 50px;
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1400px) {
+    .image {
+        width: 400px !important;
+        height: 500px !important;
+    }
+
+    .offsetImage {
+        margin-top: -62px;
     }
 }

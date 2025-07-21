@@ -12,6 +12,15 @@
     font-style: normal;
 }
 
+.footerContainer {
+    background-color: #000000;
+    min-height: 900px !important;
+    color: #ffffff;
+    padding: 40px 0 20px;
+    font-family: 'MyCustomFont';
+    z-index: 30 !important;
+}
+
 .footer {
     background-color: #000000;
     color: #ffffff;
@@ -21,6 +30,7 @@
 
 .container {
     /* border: 1px solid red; */
+    background-color: #000000;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -127,7 +137,7 @@
 
 .contactValue {
     color: #ffffff;
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 1.3rem;
 }
 
