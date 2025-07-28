@@ -30,16 +30,15 @@
 .backgroundText {
     position: fixed;
     top: 40%;
-    right: 129px !important;
+    right: 100px !important;
     transform: translateY(-50%);
     font-family: 'MyCustomFont', sans-serif;
-    font-size: 200px;
+    font-size: 180px;
     font-weight: 900;
     color: rgba(26, 25, 25, 0.285);
     z-index: 1;
     pointer-events: none;
-    letter-spacing: 1px;
-}
+    letter-spacing: 0.5px;}
 
 .gallery {
     position: relative;
@@ -215,9 +214,9 @@
     }
 
     .backgroundText {
-        font-size: 120px;
-        right: -60px;
-        letter-spacing: -7px;
+        font-size: 65px;
+        right: 20px !important;
+        letter-spacing: -2px;
     }
 
     .projectCard {

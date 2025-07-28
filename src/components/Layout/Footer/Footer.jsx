@@ -7,6 +7,8 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
+import bg from '../../../assets/bg-black.png';
+
 
 const Footer = () => {
     const location = useLocation();
@@ -65,20 +67,14 @@ const Footer = () => {
 
     // Social media click handlers
     const handleInstagramClick = () => {
-        window.open('https://www.instagram.com/', '_blank');
+        window.open('https://www.instagram.com/bloomingspace_charvi_patel/?utm_source=qr&igsh=MTl2OWk3cHZzMWFuNg%3D%3D#', '_blank');
     };
 
-    const handleTwitterClick = () => {
-        window.open('https://twitter.com/', '_blank');
-    };
 
-    const handleLinkedInClick = () => {
-        window.open('https://www.linkedin.com/', '_blank');
-    };
 
     // Contact action handlers
     const handleCallClick = () => {
-        window.open('tel:+919558657890', '_self');
+        window.open('tel:+917600010238', '_self');
     };
 
     const handleLocationClick = () => {
@@ -90,7 +86,7 @@ const Footer = () => {
     };
 
     return (
-        <div className={styles.footerContainer}>
+        <div className={styles.footerContainer} style={{ backgroundImage: `url(${bg})` }}>
             <div id="contact-form">
                 <ContactForm />
             </div>
@@ -137,8 +133,7 @@ const Footer = () => {
                                     href="#"
                                     className={styles.socialLink}
                                     onClick={(e) => {
-                                        e.preventDefault();
-                                        handleTwitterClick();
+                                        e.preventDefault()
                                     }}
                                 >
                                     <div className={styles.socialIcon}>
@@ -150,7 +145,6 @@ const Footer = () => {
                                     className={styles.socialLink}
                                     onClick={(e) => {
                                         e.preventDefault();
-                                        handleLinkedInClick();
                                     }}
                                 >
                                     <div className={styles.socialIcon}>
@@ -168,7 +162,7 @@ const Footer = () => {
                                     onClick={handleCallClick}
                                     style={{ cursor: 'pointer' }}
                                 >
-                                    +91 9558657890
+                                    +91 7600010238
                                 </span>
                             </div>
                             <div className={styles.contactItem}>
@@ -188,7 +182,7 @@ const Footer = () => {
                                     onClick={handleMailClick}
                                     style={{ cursor: 'pointer' }}
                                 >
-                                    mail@businessspace.in
+                                    info.bloomingspace@gmail.com
                                 </span>
                             </div>
                         </div>

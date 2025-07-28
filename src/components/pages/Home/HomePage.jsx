@@ -9,6 +9,17 @@ import ServicesSection from './Section/ServicesSection/ServicesSection';
 import FAQ from './Section/FAQ/FAQ';
 
 export default function HomePage() {
+    // Function to handle smooth scroll to Work section
+    const scrollToWork = () => {
+        const workSection = document.getElementById('Work');
+        if (workSection) {
+            workSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <>
             {/* bg image */}
@@ -29,7 +40,10 @@ export default function HomePage() {
 
                     {/* View Works Button */}
                     <div className={styles.buttonContainer}>
-                        <button className={styles.viewWorksButton}>
+                        <button 
+                            className={styles.viewWorksButton}
+                            onClick={scrollToWork}
+                        >
                             <span className={styles.buttonText}>View Works</span>
                             <ArrowDown className={styles.arrowIcon} />
                         </button>
@@ -46,7 +60,9 @@ export default function HomePage() {
             {/* rotating image */}
             <InteriorMarquee />
             {/*  Works Section */}
-            <WillowHouse />
+            <div id='Work'>
+                <WillowHouse />
+            </div>
             {/* ServicesSection  */}
             <div id='Services'>
                 <ServicesSection />

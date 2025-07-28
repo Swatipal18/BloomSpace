@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('../../../assets/Fonts/Founders_Grotesk/FoundersGrotesk-Regular.otf') format('truetype');
+    src: url('../../../../assets/Fonts/Founders_Grotesk/FoundersGrotesk-Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'customBold';
-    src: url('../../../assets/Fonts/ABC Diatype/Web Fonts/4c4a87973ef80fc72049e01b9085fadc.ttf') format('truetype');
+    src: url('../../../../assets/Fonts/ABC Diatype/Web Fonts/4c4a87973ef80fc72049e01b9085fadc.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -68,8 +68,7 @@
     width: 100%;
     max-width: 55%;
     word-wrap: break-word;
-    font-family: 'MyCustomFont', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-
+    font-family: 'MyCustomFont';
     position: relative;
     z-index: 2;
 }
@@ -79,7 +78,7 @@
     text-align: right;
     width: 100%;
     max-width: 100%;
-    margin-left: -5rem !important;
+    margin-left: 30px !important;
     position: relative;
     z-index: 2;
 }
@@ -87,7 +86,7 @@
 .largeTitle {
     color: #ffffff !important;
     font-family: 'customBold';
-    font-size: 5rem !important;
+    font-size: 4.5rem !important;
     margin: 0;
     width: 100%;
     max-width: 100%;
@@ -97,7 +96,32 @@
 }
 
 /* Responsive Design */
-
+@media (max-width:1400px) {
+    .heroTitle {
+        color: #ffffff !important;
+        font-weight: 100;
+        font-size: 2.2rem !important;
+        margin-left: 32rem !important;
+        margin-top: 11rem !important;
+        line-height: 1.2;
+        margin: 0;
+        width: 100%;
+        max-width: 55%;
+        word-wrap: break-word;
+        font-family: 'MyCustomFont';
+        position: relative;
+        z-index: 2;
+    }
+    .largeTitleContainer {
+    margin-top: 9rem !important;
+    text-align: right;
+    width: 100%;
+    max-width: 100%;
+    margin-left: -5rem !important;
+    position: relative;
+    z-index: 2;
+}
+}
 /* Tablet */
 @media (max-width: 768px) {
     .container {

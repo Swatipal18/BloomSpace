@@ -36,7 +36,7 @@ const WillowHouse = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.backgroundText}>Work</div>
+            <div className={styles.backgroundText}>Selected Work</div>
 
             <div className={styles.gallery}>
                 {projects.map((project, index) => (

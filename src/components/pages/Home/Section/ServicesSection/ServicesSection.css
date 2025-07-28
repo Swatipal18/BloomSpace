@@ -91,7 +91,7 @@
 
 .service-arrow {
     color: #666;
-    font-size: 50px ;
+    font-size: 50px;
     transition: all 0.3s ease;
     opacity: 0;
     background-color: #4A4A4A4D;
@@ -215,6 +215,58 @@
         line-height: 1.6;
         color: #CCCCCC;
         margin: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .services-container {
+        padding: 40px 15px;
+        min-height: 200px !important;
+        height: auto !important;
+    }
+
+    .mission-badge::before {
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    .services-content {
+        gap: 10px;
+    }
+
+    .service-name {
+        font-size: 25px;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 200px;
+        margin-top: 120px !important;
+        overflow: hidden;
+        margin-bottom: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        z-index: 19 !important;
+    }
+
+    .service-arrow {
+        color: #666;
+        font-size: 20px !important;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+
+
+    .service-description {
+        font-size: 13px !important;
+    }
+
+    .red-box {
+        width: 16px;
+        height: 16px;
+    }
+
+    .services-title {
+        font-size: 12px;
     }
 }
 

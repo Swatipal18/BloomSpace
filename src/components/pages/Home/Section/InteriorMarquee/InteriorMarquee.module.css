@@ -1,18 +1,35 @@
 /* Container */
 .container {
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 18 !important;
     width: 100%;
     height: 100vh;
     background-color: black;
     overflow: hidden;
     display: flex;
     align-items: center;
-    z-index: 5 !important;
+    padding-top: 2rem !important;
+}
+
+.shadowOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 19;
+    pointer-events: none;
+    box-shadow:
+        inset -230px -18px 50px -98px rgba(22, 22, 22, 0.942),
+        inset 230px 18px 50px -150px rgba(10, 10, 10, 0.996) !important;
 }
 
 /* Marquee Wrapper */
 .marqueeWrapper {
-    position: relative;
-    width: 95%;
     margin-left: 50px;
     z-index: 5;
 }
@@ -20,7 +37,7 @@
 /* Marquee Content */
 .marqueeContent {
     display: flex;
-    animation: marquee 12s linear infinite;
+    animation: marquee 19s linear infinite;
 }
 
 /* Image Container */
@@ -54,7 +71,11 @@
     }
 
     100% {
-        transform: translateX(-60%);
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
     }
 }
 
@@ -84,9 +105,22 @@
 
 @media (min-width: 300px) and (max-width: 479px) {
     .image {
-        width: 250px !important;
-        height: 350px !important;
+        width: 200px !important;
+        height: 300px !important;
     }
+
+    .shadowOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 19;
+    pointer-events: none;
+    box-shadow:
+        inset -130px -18px 50px -98px black,
+        inset 180px 18px 50px -150px black !important;
+}
 
     .imageContainer {
         margin: 0 4px;

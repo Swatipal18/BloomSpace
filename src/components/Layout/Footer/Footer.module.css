@@ -14,14 +14,22 @@
 
 .footerContainer {
     background-color: #000000;
-    min-height: 900px !important;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh !important;
     color: #ffffff;
     padding: 40px 0 20px;
     font-family: 'MyCustomFont';
     z-index: 30 !important;
-}
+  }
 
 .footer {
+      margin-top: 60px !important;
+      margin-bottom: 20px !important;
+
     background-color: #000000;
     color: #ffffff;
     padding: 40px 0 20px;
@@ -34,7 +42,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    margin-top: -100px !important;
+    margin-top: 50px !important;
 }
 
 /* Brand Section */
@@ -108,7 +116,7 @@
 }
 
 .navLink:hover {
-    color: #ff6b35;
+    color: #FF2300;
 }
 
 /* Contact Information */
@@ -128,7 +136,7 @@
 }
 
 .contactLabel {
-    color: #ff6b35;
+    color: #FF2300;
     font-size: 1.5rem;
     margin-bottom: 10px;
     font-style: 'MyCustomFont';
@@ -137,8 +145,8 @@
 
 .contactValue {
     color: #ffffff;
-    margin-top: 5px;
-    font-size: 1.3rem;
+    margin-top: -2px !important;
+    font-size: 1.5rem;
 }
 
 /* Social Media */
@@ -164,7 +172,8 @@
 }
 
 .socialIcon:hover {
-    background-color: #ff6b35;
+    background-color: #FF2300;
+    color: #fcfafa;
 }
 
 /* Copyright */
@@ -186,13 +195,13 @@
 }
 
 .brandLink {
-    color: #ff6b35;
+    color: #FF2300;
     text-decoration: none;
     font-weight: bold;
 }
 
 .brandLink:hover {
-    color: #ff6b35ae;
+    color: #FF2300ae;
     text-decoration: none;
 }
 
@@ -268,7 +277,7 @@
     }
 
     .contactLabel {
-        color: #ff6b35;
+        color: #FF2300;
         font-size: 1.3rem !important;
         margin-bottom: 10px;
         font-style: 'MyCustomFont';
@@ -405,7 +414,7 @@
     }
 
     .contactLabel {
-        color: #ff6b35;
+        color: #FF2300;
         font-size: 2rem !important;
         justify-content: center;
         margin-bottom: 0px !important;
@@ -426,7 +435,127 @@
         color: #cccccc;
     }
 }
+@media (max-width: 400px) {
+    .footer {
+      margin-top: -80px !important;
+        height: 1100px !important;
+        padding: 20px 0 10px !important;
+    }
 
+    .container {
+        padding: 0 10px !important;
+    }
+
+    .brandSection {
+        margin-top: 80px !important;
+        height: 250px;
+        margin-bottom: 150px !important;
+    }
+
+    .logoContainer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 10px;
+    }
+
+    .logo {
+        margin-top: -0px;
+        width: 300px !important;
+        height: 180px !important;
+        object-fit: cover;
+    }
+
+
+    .brandName {
+        font-family: 'customBold' !important;
+        line-height: 0 px !important;
+        font-size: 4.3rem !important;
+        font-weight: bold;
+        margin: 0;
+        color: #ffffff;
+    }
+
+    .divider {
+        background-color: #1A1A1A;
+        padding: 10px 15px;
+        height: 600px !important;
+        margin-bottom: 50px;
+        margin-top: 30px !important;
+    }
+
+    .logoContainer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 55px;
+    }
+
+    .navigationSection {
+        flex-direction: row;
+        gap: 5px !important;
+        text-align: center;
+    }
+
+    .navList {
+        flex-direction: column;
+        gap: 20px !important;
+        text-align: center;
+    }
+
+    .contactInfo {
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .contactItem {
+        width: 100%;
+        flex-direction: row !important;
+        gap: 5px;
+    }
+
+
+    .socialMedia {
+        justify-content: end;
+    }
+
+    .socialIcon {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .contactInfo {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .contactLabel {
+        color: #FF2300;
+        font-size: 1.5rem !important;
+        justify-content: center;
+        margin-bottom: 0px !important;
+
+    }
+
+    .contactValue {
+        color: #ffffff;
+        margin-top: 4px !important;
+        font-size: 1.2rem !important;
+    }
+
+    .copyright {
+        /* height: 50px; */
+        flex-direction: column;
+        padding-top: 20px;
+        font-size: 1.2rem;
+        color: #cccccc;
+    }
+}
 @media (max-width: 360px) {
     .footer {
         height: 1050px !important;
@@ -526,7 +655,7 @@
     }
 
     .contactLabel {
-        color: #ff6b35;
+        color: #FF2300;
         font-size: 1.5rem !important;
         justify-content: center;
         margin-bottom: 0px !important;

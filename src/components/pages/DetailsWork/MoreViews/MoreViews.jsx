@@ -77,7 +77,7 @@ const MoreViews = ({ currentProject }) => {
                 </div>
             </div>
             <div className={styles.gallery}>
-                {filteredProjects.map((project, index) => (
+                {filteredProjects.map((project) => (
                     <div
                         key={project.id}
                         className={`${styles.projectCard}`}

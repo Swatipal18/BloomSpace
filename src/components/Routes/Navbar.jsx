@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
     createHashRouter,
     RouterProvider,
     Navigate
 } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom';
 import AppLayout from '../Layout/AppLayout';
 import HomePage from '../pages/Home/HomePage';
 import About from '../pages/About/About';
@@ -37,7 +36,7 @@ function Navbar() {
                 {
                     path: "/Service",
                     element: <DetailsWork />
-                }
+                },
 
             ]
         }, {

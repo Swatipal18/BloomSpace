@@ -48,7 +48,7 @@ const ServicesSection = () => {
                     </div>
 
                     <div className="services-list">
-                        {services.map((service, index) => (
+                        {services.map((service) => (
                             <div
                                 key={service.name}
                                 className={`service-item ${activeService === service.name ? 'active' : ''}`}

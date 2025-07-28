@@ -1,19 +1,20 @@
 import React from 'react';
 import styles from './InteriorMarquee.module.css';
+import bg from '../../../../../assets/bg-black.png'
 import Image from '../.././../../../assets/home_images/colorful-pastel-minimal-interior-design (1)-min.jpg';
 import Image2 from '../.././../../../assets/home_images/colorful-pastel-minimal-interior-design-min.jpg';
 import Image3 from '../.././../../../assets//home_images/elegant-black-minimal-interior-design-min.jpg';
 import Image4 from '../.././../../../assets/home_images/modern-styled-entryway-min.jpg';
 
 const InteriorMarquee = () => {
-    // Sample interior design images - replace with your actual images
     const images = [
         Image3, Image2, Image, Image4, Image3,
         Image2, Image, Image4
     ];
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container}  style={{ backgroundImage: `url(${bg})` }}>
+            <div className={styles.shadowOverlay}></div>
             <div className={styles.marqueeWrapper}>
                 <div className={styles.marqueeContent}>
                     {/* First set of images */}
@@ -27,6 +28,7 @@ const InteriorMarquee = () => {
                                 alt={`Interior ${index + 1}`}
                                 className={styles.image}
                             />
+
                         </div>
                     ))}
 

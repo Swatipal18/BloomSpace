@@ -82,9 +82,8 @@ const ContactForm = () => {
     return (
         <div className="contact-container" style={{ backgroundImage: `url(${bg})` }}>
             <div className="contact-wrapper">
-                <div className="contact-header">
-                    <div className="red-box"></div>
-                    <h2 className="contact-title">CONTACT US</h2>
+                <div className="missionbadge">
+                    <span className="badgetext">Contact Us</span>
                 </div>
 
                 <div className="contact-content">
@@ -101,7 +100,7 @@ const ContactForm = () => {
                                 value={formData.name}
                                 onChange={handleInputChange}
                                 className="form-input"
-                                placeholder="Anup Parekh"
+                                placeholder="Your Name"
                             />
                             {errors.name && <span className="error-message">{errors.name}</span>}
                         </div>
@@ -114,7 +113,7 @@ const ContactForm = () => {
                                 value={formData.email}
                                 onChange={handleInputChange}
                                 className="form-input"
-                                placeholder="anupparekh@nexoratech.in"
+                                placeholder="Example :- abc@gmail.com"
                             />
                             {errors.email && <span className="error-message">{errors.email}</span>}
                         </div>

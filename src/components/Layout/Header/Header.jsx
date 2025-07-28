@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, Menu } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
-import logo from "../../../assets/Logo/logo_blooming space_1.png";
+// import logo from "../../../assets/Logo/logo_blooming space_1.png";
 import logo2 from "../../../assets/Logo/logo_blooming space_White.png";
 import logo3 from "../../../assets/Logo/logo_blooming space_Black.png";
 import img from "../../../assets/modern-styled-entryway-min.jpg";
@@ -108,7 +108,7 @@ const Header = () => {
                 <div className={styles.logoContainer}>
                     <a href="/" className={styles.logoLink} onClick={handleLogoClick}>
                         <img
-                            src={isMenuOpen ? logo : (isServicePage ? logo3 : logo2)}
+                            src={isMenuOpen ? logo2 : (isServicePage ? logo3 : logo2)}
                             alt="Logo"
                             className={styles.logo}
                         />

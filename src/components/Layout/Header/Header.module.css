@@ -160,7 +160,7 @@
 }
 
 .menuImage {
-    width: 500px;
+    width: 300px;
     height: 300px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
@@ -173,7 +173,7 @@
 .contactInfo p {
     font-family: 'MyCustomFont';
     font-weight: 700;
-    font-size: 25.5px;
+    font-size: 32px;
 }
 
 /* Tablet Styles */
@@ -360,7 +360,101 @@
         font-size: 0.875rem;
     }
 }
+@media (max-width: 400px) {
+    .header {
+        height: 100px;
+        padding: 0 12px;
+    }
+    .logo {
+            margin-top: 2px !important;
+        height: 60px;
+    }
 
+    .menuButton svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .menuModal {
+        height: 450px !important;
+        padding-top: 0px;
+    }
+
+    .menuContent {
+        height: calc(100vh - 200px);
+        padding: 0 12px;
+        gap: 12px;
+    }
+
+    .menuLeft {
+        flex: 1.3;
+        padding: 16px 0;
+    }
+
+    .menuRight {
+        flex: 0.7;
+        padding: 16px 0;
+    }
+
+    .menuItems {
+        gap: 16px;
+    }
+
+    .menuItem {
+        font-size: 1.5rem;
+        gap: 6px;
+        margin: 4px 0;
+    }
+
+    .menuLink {
+        gap: 6px;
+    }
+
+    .menuNumber {
+        font-size: 1.3rem;
+    }
+
+    .menuImage {
+        max-width: 120px;
+    }
+
+    .contactInfo p {
+        font-size: 0.8rem;
+    }
+
+    .demoContainer {
+        padding-top: 130px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .demoTitle {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .demoSubtitle {
+        font-size: 1rem;
+        margin-bottom: 24px;
+    }
+
+    .featuresGrid {
+        gap: 16px;
+    }
+
+    .featureCard {
+        padding: 16px;
+    }
+
+    .featureTitle {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .featureText {
+        font-size: 0.75rem;
+    }
+}
 /* Very Small Mobile Styles (360px and below) */
 @media (max-width: 360px) {
     .header {
